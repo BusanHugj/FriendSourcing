@@ -1,17 +1,20 @@
--- ?��?��?�� Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   ?���?:        2022-06-13 16:07:34 KST
---   ?��?��?��:      Oracle Database 11g
---   ?��?��:      Oracle Database 11g
+-- 생성자 Oracle SQL Developer Data Modeler 21.4.1.349.1605
+--   위치:        2022-06-14 12:40:55 KST
+--   사이트:      Oracle Database 11g
+--   유형:      Oracle Database 11g
 
 
 
-CREATE USER fs IDENTIFIED BY ACCOUNT UNLOCK ;
+CREATE USER fs IDENTIFIED BY account
+    ACCOUNT UNLOCK;
 
 -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
 
 -- predefined type, no DDL - XMLTYPE
 
 CREATE SEQUENCE fs.fs_seq START WITH 1 INCREMENT BY 1 MINVALUE 1 ORDER;
+
+CREATE SEQUENCE fs.sequence2 START WITH 1 INCREMENT BY 1 MINVALUE 1 ORDER;
 
 CREATE TABLE commentlike (
     member_memid   VARCHAR2(50) NOT NULL,
@@ -120,11 +123,6 @@ ALTER TABLE comments
         REFERENCES feed ( fenum )
     NOT DEFERRABLE;
 
-ALTER TABLE comments
-    ADD CONSTRAINT comment_member_fk FOREIGN KEY ( member_memid )
-        REFERENCES member ( memid )
-    NOT DEFERRABLE;
-
 ALTER TABLE commentlike
     ADD CONSTRAINT commentlike_comment_fk FOREIGN KEY ( comment_comnum )
         REFERENCES comments ( comnum )
@@ -180,14 +178,13 @@ ALTER TABLE tag
         REFERENCES feed ( fenum )
     NOT DEFERRABLE;
 
-
 CREATE SEQUENCE  "FS"."FS_SEQ" INCREMENT BY 1 START WITH 1  MINVALUE 1 NOMAXVALUE NOCYCLE ORDER;
 
--- Oracle SQL Developer Data Modeler ?��?�� 보고?��: 
+-- Oracle SQL Developer Data Modeler 요약 보고서: 
 -- 
 -- CREATE TABLE                            12
 -- CREATE INDEX                             0
--- ALTER TABLE                             17
+-- ALTER TABLE                             16
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0
@@ -207,7 +204,7 @@ CREATE SEQUENCE  "FS"."FS_SEQ" INCREMENT BY 1 START WITH 1  MINVALUE 1 NOMAXVALU
 -- CREATE DISK GROUP                        0
 -- CREATE ROLE                              0
 -- CREATE ROLLBACK SEGMENT                  0
--- CREATE SEQUENCE                          1
+-- CREATE SEQUENCE                          2
 -- CREATE MATERIALIZED VIEW                 0
 -- CREATE MATERIALIZED VIEW LOG             0
 -- CREATE SYNONYM                           0
