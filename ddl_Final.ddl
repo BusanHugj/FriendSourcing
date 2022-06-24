@@ -1,7 +1,7 @@
--- ÏÉùÏÑ±Ïûê Oracle SQL Developer Data Modeler 21.4.1.349.1605
---   ÏúÑÏπò:        2022-06-14 12:40:55 KST
---   ÏÇ¨Ïù¥Ìä∏:      Oracle Database 11g
---   Ïú†Ìòï:      Oracle Database 11g
+-- ?Éù?Ñ±?ûê Oracle SQL Developer Data Modeler 21.4.1.349.1605
+--   ?úÑÏπ?:        2022-06-14 12:40:55 KST
+--   ?Ç¨?ù¥?ä∏:      Oracle Database 11g
+--   ?ú†?òï:      Oracle Database 11g
 
 
 
@@ -12,7 +12,7 @@ CREATE USER fs IDENTIFIED BY account
 
 -- predefined type, no DDL - XMLTYPE
 
-CREATE SEQUENCE fs.fs_seq START WITH 1 INCREMENT BY 1 MINVALUE 1 ORDER;
+
 
 CREATE SEQUENCE fs.sequence2 START WITH 1 INCREMENT BY 1 MINVALUE 1 ORDER;
 
@@ -89,7 +89,7 @@ CREATE TABLE member (
     filename    VARCHAR2(200),
     uploadpath  VARCHAR2(200),
     uuid        VARCHAR2(100),
-    memprofile  VARCHAR2(300) DEFAULT 'ÏïàÎÖïÌïòÏÑ∏Ïöî'
+    memprofile  VARCHAR2(300) DEFAULT '?ïà?Öï?ïò?Ñ∏?öî'
 )
 LOGGING;
 
@@ -180,7 +180,7 @@ ALTER TABLE tag
 
 CREATE SEQUENCE  "FS"."FS_SEQ" INCREMENT BY 1 START WITH 1  MINVALUE 1 NOMAXVALUE NOCYCLE ORDER;
 
--- Oracle SQL Developer Data Modeler ÏöîÏïΩ Î≥¥Í≥†ÏÑú: 
+-- Oracle SQL Developer Data Modeler ?öî?ïΩ Î≥¥Í≥†?Ñú: 
 -- 
 -- CREATE TABLE                            12
 -- CREATE INDEX                             0
